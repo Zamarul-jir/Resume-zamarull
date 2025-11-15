@@ -1,8 +1,3 @@
-/* styles.css - final project
-   Animated gradient background (slow), responsive IG-style gallery,
-   semantic layout, accessible focus states.
-*/
-
 /* ===== Variables ===== */
 :root{
   --bg-dark: #061918;
@@ -11,21 +6,19 @@
   --glass: rgba(255,255,255,0.04);
   --muted: rgba(255,255,255,0.82);
   --card-radius: 12px;
-  --fw: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  --fw: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
   --max-width: 1200px;
   --container-pad: 28px;
 }
 
 /* ===== Global ===== */
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 html,body{height:100%}
 body{
   margin:0;
   font-family:var(--fw);
   color:#e6fff7;
   background:var(--bg-dark);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
   scroll-behavior:smooth;
   padding-top:76px;
   position:relative;
@@ -33,12 +26,11 @@ body{
 }
 
 /* ===== Animated gradient background ===== */
-/* three overlapping gradients with slow movement */
 .bg-anim{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
 .grad{position:absolute; width:140%; height:140%; left:-20%; top:-20%; filter:blur(80px); opacity:0.7; transform:translate3d(0,0,0);}
-.grad1{background:linear-gradient(120deg,#053f34,#0f7a59,#48e0b1); animation:slowMove 22s linear infinite;}
-.grad2{background:linear-gradient(120deg,#114b3f,#2aa986,#6fe6c8); top:-10%; left:10%; animation:slowMove 28s linear infinite reverse; opacity:0.5;}
-.grad3{background:linear-gradient(120deg,#0b2f26,#1c6f57,#3cd4a8); top:20%; left:-10%; animation:slowMove 34s linear infinite; opacity:0.45;}
+.grad1{background:linear-gradient(120deg,#ff5f6d,#ffc371,#ff7b00); animation:slowMove 18s linear infinite;}
+.grad2{background:linear-gradient(120deg,#24c6dc,#514a9d,#ff6a00); top:-10%; left:10%; animation:slowMove 24s linear infinite reverse; opacity:0.7;}
+.grad3{background:linear-gradient(120deg,#f7971e,#ffd200,#6a11cb); top:20%; left:-10%; animation:slowMove 30s linear infinite; opacity:0.6;}
 
 @keyframes slowMove{
   0%{transform: translate3d(0,0,0) rotate(0deg) scale(1);}
@@ -75,85 +67,29 @@ body{
 .hero-tagline{max-width:620px; opacity:0.95; margin-bottom:18px;}
 .hero-ctas{display:flex; gap:12px; align-items:center;}
 
+/* Buttons interactive */
 .btn{display:inline-block; padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:600; transition:transform .18s ease, box-shadow .18s ease;}
 .btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#052018; box-shadow:0 8px 22px rgba(0,0,0,0.35);}
-.btn-primary:hover, .btn-primary:focus{transform:translateY(-3px) scale(1.02); box-shadow:0 14px 34px rgba(0,0,0,0.5)}
+.btn-primary:hover, .btn-primary:focus{transform:translateY(-3px) scale(1.02); box-shadow:0 14px 34px rgba(0,0,0,0.5);}
+.btn-primary .btn-icon{display:inline-block; margin-right:6px; transition: transform 0.25s ease;}
+.btn-primary:hover .btn-icon{transform: translateY(-4px) rotate(15deg) scale(1.2);}
+.btn-primary:active{transform: translateY(1px) scale(0.98);}
 .btn-ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
 .btn-ghost:hover{transform:translateY(-3px); color:white}
 
-/* profile */
-.hero-right{display:flex; flex-direction:column; align-items:center; gap:8px}
-#profile-photo{border-radius:200px; width:220px; height:220px; object-fit:cover; border:5px solid rgba(255,255,255,0.04); box-shadow:0 18px 40px rgba(0,0,0,0.45);}
-.photo-note{font-size:12px; opacity:0.85}
+/* Hero profile 3D tilt */
+#profile-photo{border-radius:200px; width:220px; height:220px; object-fit:cover; border:5px solid rgba(255,255,255,0.04); box-shadow:0 18px 40px rgba(0,0,0,0.45); transition: transform 0.2s ease;}
 
-/* panels */
-.panel{padding:40px 0; position:relative; z-index:5}
-.panel h3{margin:0 0 12px; font-size:20px}
-.muted{opacity:0.85}
+/* Panels & pages */
+.page{opacity:0; transform:translateY(20px); min-height: calc(100vh - 76px); padding:60px 0; transition: all 0.4s ease;}
+.page:target{opacity:1; transform:translateY(0);}
 
-.two-column{display:grid; grid-template-columns:1fr 320px; gap:28px; align-items:start}
-
-/* pill timeline */
-.timeline{display:flex; flex-direction:column; gap:10px}
-.pill{display:inline-block; background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:999px; font-size:14px; color:var(--muted)}
-
-/* skills */
-.skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px}
-.skill-card{background:rgba(255,255,255,0.03); padding:14px; border-radius:12px; box-shadow:inset 0 -2px 8px rgba(0,0,0,0.25)}
-.skill-title{font-weight:600; margin-bottom:8px}
-.skill-list{list-style:none; padding:0; margin:0}
-.skill-list li{margin:10px 0; font-size:14px}
-.skill-percent{float:right; opacity:0.9}
-.skill-bar{height:8px; background:rgba(0,0,0,0.12); border-radius:999px; margin-top:6px; overflow:hidden}
-.skill-bar > div{height:100%; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); border-radius:999px}
-
-/* cards & notes */
-.cards{display:grid; gap:12px}
-.card{background:rgba(255,255,255,0.02); padding:16px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,.44)}
-.notes-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
-.note{background:rgba(255,255,255,0.02); padding:14px; border-radius:12px}
-
-/* Gallery (IG-style) */
-.gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
-.gallery-item{display:block; overflow:hidden; border-radius:12px; position:relative; background:rgba(0,0,0,0.06)}
-.gallery-item img{width:100%; height:100%; display:block; object-fit:cover; transition:transform .3s ease, filter .25s ease;}
-.gallery-item:hover img, .gallery-item:focus img{transform:scale(1.05); filter:brightness(1.03)}
-.gallery-item img{aspect-ratio:1/1}
-
-/* CSS-only lightbox */
-.lightboxes .lightbox{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.82); opacity:0; pointer-events:none; transform:scale(.98); transition:opacity .22s ease, transform .18s ease;}
-.lightboxes .lightbox img{max-width:90%; max-height:80%; border-radius:10px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
-.lightboxes .lightbox .close{position:absolute; top:28px; right:30px; color:white; text-decoration:none; font-size:34px; padding:6px 10px; border-radius:8px;}
-.lightboxes .lightbox:target{opacity:1; pointer-events:auto; transform:scale(1);}
-
-/* contact */
-.contact-grid{display:grid; grid-template-columns:1fr 320px; gap:20px; align-items:start}
-.contact-list{list-style:none; padding:0; margin:14px 0 0; display:flex; flex-direction:column; gap:8px}
-.contact-list a{color:var(--muted); text-decoration:none}
-.icon{vertical-align:middle; margin-right:8px; opacity:0.95}
-
-/* footer */
-.site-footer{padding-top:12px; color:rgba(255,255,255,0.6); font-size:13px}
-
-/* responsive */
+/* Responsive grid */
 @media (max-width:980px){
-  .hero-grid, .two-column, .contact-grid{grid-template-columns:1fr}
-  .skills-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .notes-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid, .two-column{grid-template-columns:1fr}
 }
-
 @media (max-width:620px){
   :root{--container-pad:16px}
-  .nav ul{display:none}
   .hero-title{font-size:28px}
-  .skills-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr}
-  .notes-grid{grid-template-columns:1fr}
-  #profile-photo{width:160px; height:160px}
-}
-
-/* reduced motion */
-@media (prefers-reduced-motion: reduce){
-  * { animation: none !important; transition: none !important; }
+  #profile-photo{width:160px;height:160px}
 }
