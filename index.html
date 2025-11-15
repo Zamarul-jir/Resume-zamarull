@@ -10,45 +10,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#home">Skip to content</a>
 
-  <header class="topbar" role="banner">
+  <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
         <h1 class="brand-name">Zamarul Asyraf</h1>
         <p class="brand-sub">Information Management Student</p>
       </div>
-      <nav class="nav" role="navigation" aria-label="Primary">
+      <nav class="nav">
         <ul>
-          <li><a href="#" onclick="showSection('home')">Home</a></li>
-          <li><a href="#" onclick="showSection('about')">About</a></li>
-          <li><a href="#" onclick="showSection('skills')">Skills</a></li>
-          <li><a href="#" onclick="showSection('experience')">Experience</a></li>
-          <li><a href="#" onclick="showSection('education')">Education</a></li>
-          <li><a href="#" onclick="showSection('gallery')">Gallery</a></li>
-          <li><a href="#" onclick="showSection('notes')">Reflection</a></li>
-          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#notes">Reflection</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <!-- HOME -->
     <section id="home" class="panel">
       <div class="container hero-grid">
         <div class="hero-left">
           <h2 class="hero-title">Hi, I’m <span class="accent">Zamarul</span><br>Information Management Student</h2>
-          <p class="hero-tagline">
-            Passionate about crafting fun and meaningful digital experiences.
-          </p>
+          <p class="hero-tagline">Passionate about crafting fun and meaningful digital experiences.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="assets/resume-placeholder.pdf" download>Download Resume</a>
-            <a class="btn btn-ghost" href="#" onclick="showSection('contact')">Contact</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
           </div>
         </div>
         <aside class="hero-right">
-          <img id="profile-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect rx='200' ry='200' width='400' height='400' fill='%23ff6b81'/><text x='50%' y='50%' font-size='48' font-family='Baloo,Arial' dominant-baseline='middle' text-anchor='middle' fill='white'>Photo</text></svg>" alt="Profile photo" width="220" height="220">
+          <img id="profile-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect rx='200' ry='200' width='400' height='400' fill='%23ff6b81'/><text x='50%' y='50%' font-size='48' font-family='Baloo,Arial' dominant-baseline='middle' text-anchor='middle' fill='white'>Photo</text></svg>" alt="Profile photo">
           <p class="photo-note">Replace this with your own photo.</p>
         </aside>
       </div>
@@ -68,11 +66,11 @@
       <div class="container">
         <h3>Skills</h3>
         <div class="skills-graph">
-          <div class="skill"><span>HTML & CSS</span><div class="bar" data-percent="85"><div></div></div></div>
-          <div class="skill"><span>MySQL</span><div class="bar" data-percent="70"><div></div></div></div>
-          <div class="skill"><span>Metadata & Archival Theory</span><div class="bar" data-percent="75"><div></div></div></div>
-          <div class="skill"><span>Figma</span><div class="bar" data-percent="70"><div></div></div></div>
-          <div class="skill"><span>XAMPP / MySQL Workbench</span><div class="bar" data-percent="65"><div></div></div></div>
+          <div class="skill"><span>HTML & CSS</span><div class="bar bar-85"><div></div></div></div>
+          <div class="skill"><span>MySQL</span><div class="bar bar-70"><div></div></div></div>
+          <div class="skill"><span>Metadata & Archival Theory</span><div class="bar bar-75"><div></div></div></div>
+          <div class="skill"><span>Figma</span><div class="bar bar-70"><div></div></div></div>
+          <div class="skill"><span>XAMPP / MySQL Workbench</span><div class="bar bar-65"><div></div></div></div>
         </div>
       </div>
     </section>
@@ -126,7 +124,7 @@
     <section id="notes" class="panel">
       <div class="container">
         <h3>Reflection</h3>
-        <p>Built responsive layouts with interactive elements. Learned to combine CSS animations and JavaScript for fun effects.</p>
+        <p>Built responsive layouts with interactive elements. Learned to combine CSS animations for fun effects.</p>
       </div>
     </section>
 
@@ -140,7 +138,7 @@
           <li>Instagram: <a href="https://instagram.com/mdzmaaa" target="_blank">@mdzmaaa</a></li>
         </ul>
         <footer class="site-footer">
-          <p>© <span id="year"></span> Zamarul Asyraf Bin Zaidi</p>
+          <p>© <span id="year">2025</span> Zamarul Asyraf Bin Zaidi</p>
         </footer>
       </div>
     </section>
@@ -152,7 +150,5 @@
     <div class="grad grad2"></div>
     <div class="grad grad3"></div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
