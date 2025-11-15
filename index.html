@@ -5,89 +5,57 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zamarul Asyraf | Information Management Student</title>
   <meta name="description" content="Personal resume website of Zamarul Asyraf Bin Zaidi.">
-
-  <!-- Fun font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="topbar" role="banner">
+  <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
         <h1 class="brand-name">Zamarul Asyraf</h1>
         <p class="brand-sub">Information Management Student</p>
       </div>
-      <nav class="nav" role="navigation" aria-label="Primary">
+      <nav class="nav">
         <ul>
-          <li><a href="#home-page">Home</a></li>
-          <li><a href="#about-page">About</a></li>
-          <li><a href="#skills-page">Skills</a></li>
-          <li><a href="#experience-page">Experience</a></li>
-          <li><a href="#education-page">Education</a></li>
-          <li><a href="#gallery-page">Gallery</a></li>
-          <li><a href="#notes-page">Reflection</a></li>
-          <li><a href="#contact-page">Contact</a></li>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" onclick="showSection('about')">About</a></li>
+          <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+          <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+          <li><a href="#" onclick="showSection('education')">Education</a></li>
+          <li><a href="#" onclick="showSection('gallery')">Gallery</a></li>
+          <li><a href="#" onclick="showSection('notes')">Reflection</a></li>
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-
-    <!-- Home Page -->
-    <section id="home-page" class="page hero" aria-labelledby="hero-heading">
+  <main>
+    <!-- Home -->
+    <section id="home" class="panel">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h2 id="hero-heading" class="hero-title">
-            Hi. I’m <span class="accent">Zamarul.</span><br>
-            Information Management Student.
-          </h2>
-          <p class="hero-tagline">
-            I’m passionate about crafting meaningful digital experiences that are accessible and user-centered.
-          </p>
+          <h2 class="hero-title">Hi, I’m <span class="accent">Zamarul</span><br>Information Management Student</h2>
+          <p class="hero-tagline">I love creating fun, interactive digital experiences that are user-friendly and engaging.</p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="assets/resume-placeholder.pdf" download aria-label="Download resume">
-              <span class="btn-icon">⬇️</span> Download Resume
-            </a>
-            <a class="btn btn-ghost" href="#contact-page">Contact</a>
+            <a class="btn btn-primary" href="assets/resume-placeholder.pdf" download>Download Resume</a>
+            <a class="btn btn-ghost" href="#" onclick="showSection('contact')">Contact Me</a>
           </div>
         </div>
-
-        <aside class="hero-right" aria-hidden="false">
-          <img id="profile-photo"
-               src="data:image/svg+xml;utf8,
-               <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>
-                 <defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2364f2c0'/><stop offset='1' stop-color='%231b7f5a'/></linearGradient></defs>
-                 <rect rx='200' ry='200' width='400' height='400' fill='url(%23g)'/>
-                 <text x='50%' y='50%' font-size='48' font-family='Poppins,Arial' dominant-baseline='middle' text-anchor='middle' fill='white'>Photo</text>
-               </svg>"
-               alt="Profile photo of Zamarul Asyraf"
-               width="220" height="220" loading="lazy">
-          <p class="photo-note">Replace this with your own photo. See README.</p>
+        <aside class="hero-right">
+          <img id="profile-photo" src="https://placekitten.com/220/220" alt="Profile photo of Zamarul Asyraf">
         </aside>
       </div>
     </section>
 
-    <!-- About Page -->
-    <section id="about-page" class="page panel" aria-labelledby="about-heading">
+    <!-- About -->
+    <section id="about" class="panel">
       <div class="container two-column">
         <div>
-          <h3 id="about-heading">About Me</h3>
-          <p>
-            I am a dedicated Information Management student with interests in metadata, digital archives,
-            and user-centered interfaces. I enjoy designing clear, accessible experiences and learning new
-            tools that make content easier to find and manage.
-          </p>
-          <p>
-            I focus on sustainability, usability, and clarity in my work. I appreciate projects that have
-            an educational or social purpose.
-          </p>
+          <h3>About Me</h3>
+          <p>I am a dedicated Information Management student with interests in metadata, digital archives, and interactive content creation.</p>
+          <p>I enjoy making projects fun, colorful, and readable for everyone.</p>
         </div>
-
         <div>
           <h4>Timeline</h4>
           <div class="timeline">
@@ -99,75 +67,104 @@
       </div>
     </section>
 
-    <!-- Skills Page -->
-    <section id="skills-page" class="page panel" aria-labelledby="skills-heading">
+    <!-- Skills -->
+    <section id="skills" class="panel">
       <div class="container">
-        <h3 id="skills-heading">Skills</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-title">Technical</div>
-            <ul class="skill-list">
-              <li>HTML &amp; CSS <span class="skill-percent">85%</span>
-                <div class="skill-bar"><div style="width:85%"></div></div></li>
-              <li>MySQL <span class="skill-percent">70%</span>
-                <div class="skill-bar"><div style="width:70%"></div></div></li>
-              <li>Metadata & Archival Theory <span class="skill-percent">75%</span>
-                <div class="skill-bar"><div style="width:75%"></div></div></li>
-            </ul>
-          </div>
+        <h3>Skills</h3>
+        <canvas id="skillsCanvas" height="200" style="width:100%; border-radius:12px;"></canvas>
+      </div>
+    </section>
 
-          <div class="skill-card">
-            <div class="skill-title">Tools</div>
-            <ul class="skill-list">
-              <li>Figma <span class="skill-percent">70%</span>
-                <div class="skill-bar"><div style="width:70%"></div></div></li>
-              <li>XAMPP / MySQL Workbench <span class="skill-percent">65%</span>
-                <div class="skill-bar"><div style="width:65%"></div></div></li>
-            </ul>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-title">Soft Skills</div>
-            <ul class="skill-list">
-              <li>Communication</li>
-              <li>Collaboration</li>
-              <li>Problem Solving</li>
-            </ul>
-          </div>
+    <!-- Experience -->
+    <section id="experience" class="panel">
+      <div class="container">
+        <h3>Experience</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Library Services — Intern</h4>
+            <p>2023</p>
+            <p>Assisted with cataloguing, digitization projects, and user support.</p>
+          </article>
+          <article class="card">
+            <h4>Volunteer — Archive Project</h4>
+            <p>2022</p>
+            <p>Supported community in preserving records and creating metadata.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Other sections: experience, education, gallery, notes, contact -->
-    <!-- Rename IDs to page style (#experience-page, #education-page, etc.) as in previous example -->
-    
+    <!-- Education -->
+    <section id="education" class="panel">
+      <div class="container">
+        <h3>Education</h3>
+        <article class="card">
+          <h4>Diploma in Information Management — UiTM</h4>
+          <p>2024 — Present</p>
+          <p>Focus on digital records, metadata, and information organization.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="panel">
+      <div class="container">
+        <h3>Gallery</h3>
+        <div class="gallery-grid">
+          <img src="https://placekitten.com/300/300" alt="Gallery 1">
+          <img src="https://placekitten.com/301/301" alt="Gallery 2">
+          <img src="https://placekitten.com/302/302" alt="Gallery 3">
+          <img src="https://placekitten.com/303/303" alt="Gallery 4">
+          <img src="https://placekitten.com/304/304" alt="Gallery 5">
+          <img src="https://placekitten.com/305/305" alt="Gallery 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes / Reflection -->
+    <section id="notes" class="panel">
+      <div class="container notes-grid">
+        <article class="note">
+          <h4>Design approach</h4>
+          <p>Fun, colorful, interactive, and readable design for users.</p>
+        </article>
+        <article class="note">
+          <h4>Learning</h4>
+          <p>Continuously improving HTML/CSS/JS skills while making things interactive.</p>
+        </article>
+        <article class="note">
+          <h4>Next Goals</h4>
+          <p>Integrate more dynamic content and deploy fully on GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel">
+      <div class="container contact-grid">
+        <div>
+          <h3>Contact Me</h3>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:zamarulasyrafbinzaidi@gmail.com">zamarulasyrafbinzaidi@gmail.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/mdzmaaa" target="_blank">@mdzmaaa</a></li>
+            <li>Supercell: @WonderfulScarceAsy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Animated gradient background -->
-  <div class="bg-anim" aria-hidden="true">
+  <footer class="site-footer container">
+    <p>© <span id="currentYear"></span> Zamarul Asyraf — Built with ❤️ and GitHub Pages</p>
+  </footer>
+
+  <!-- Gradient background -->
+  <div class="bg-anim">
     <div class="grad grad1"></div>
     <div class="grad grad2"></div>
     <div class="grad grad3"></div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const y = new Date().getFullYear();
-      const el = document.getElementById('year');
-      if(el) el.textContent = y;
-
-      // Hero profile 3D tilt
-      const photo = document.getElementById('profile-photo');
-      photo.addEventListener('mousemove', (e)=>{
-        const rect = photo.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width/2;
-        const y = e.clientY - rect.top - rect.height/2;
-        photo.style.transform = `rotateY(${x/15}deg) rotateX(${-y/15}deg) scale(1.05)`;
-      });
-      photo.addEventListener('mouseleave', ()=>{
-        photo.style.transform = `rotateY(0deg) rotateX(0deg) scale(1)`;
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
