@@ -15,8 +15,10 @@ body{margin:0; font-family:var(--fw); color:var(--muted); background:var(--bg-da
 .topbar a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px;}
 .topbar a:hover{background:rgba(255,255,255,0.1);}
 
-.panel{padding:60px 0; display:none;}
-.panel h3{font-size:22px;}
+.panel{padding:60px 0;}
+.panel:target{display:block;}
+#home{display:block;} /* Home visible by default */
+
 .accent{color:var(--accent-1); font-weight:700;}
 .hero-grid{display:flex; gap:28px; align-items:center; flex-wrap:wrap;}
 .hero-left{flex:1;}
@@ -33,7 +35,17 @@ body{margin:0; font-family:var(--fw); color:var(--muted); background:var(--bg-da
 .skill{margin-bottom:16px;}
 .skill span{display:block; margin-bottom:4px;}
 .bar{background:rgba(255,255,255,0.1); height:16px; border-radius:8px; overflow:hidden;}
-.bar div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); border-radius:8px; transition:width 1.5s ease;}
+.bar div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); border-radius:8px; animation-fill-mode:forwards; animation:fill 1.5s ease forwards;}
+
+.bar-85 div{animation:fill 1.5s ease forwards 0s; width:85%;}
+.bar-70 div{animation:fill 1.5s ease forwards 0s; width:70%;}
+.bar-75 div{animation:fill 1.5s ease forwards 0s; width:75%;}
+.bar-65 div{animation:fill 1.5s ease forwards 0s; width:65%;}
+
+@keyframes fill{
+  0%{width:0;}
+  100%{width:inherit;}
+}
 
 .cards{display:flex; flex-wrap:wrap; gap:16px;}
 .card{background:rgba(255,255,255,0.05); padding:16px; border-radius:12px; flex:1 1 280px;}
