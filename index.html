@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zamarul Asyraf | Information Management Student</title>
   <meta name="description" content="Personal resume website of Zamarul Asyraf Bin Zaidi.">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" role="banner">
     <div class="container topbar-inner">
       <div class="brand">
         <h1 class="brand-name">Zamarul Asyraf</h1>
         <p class="brand-sub">Information Management Student</p>
       </div>
-      <nav class="nav">
+      <nav class="nav" role="navigation" aria-label="Primary">
         <ul>
           <li><a href="#" onclick="showSection('home')">Home</a></li>
           <li><a href="#" onclick="showSection('about')">About</a></li>
@@ -30,133 +33,118 @@
     </div>
   </header>
 
-  <main>
-    <!-- Home -->
+  <main id="main">
+    <!-- HOME -->
     <section id="home" class="panel">
       <div class="container hero-grid">
         <div class="hero-left">
           <h2 class="hero-title">Hi, I’m <span class="accent">Zamarul</span><br>Information Management Student</h2>
-          <p class="hero-tagline">I love creating fun, interactive digital experiences that are user-friendly and engaging.</p>
+          <p class="hero-tagline">
+            Passionate about crafting fun and meaningful digital experiences.
+          </p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="assets/resume-placeholder.pdf" download>Download Resume</a>
-            <a class="btn btn-ghost" href="#" onclick="showSection('contact')">Contact Me</a>
+            <a class="btn btn-ghost" href="#" onclick="showSection('contact')">Contact</a>
           </div>
         </div>
         <aside class="hero-right">
-          <img id="profile-photo" src="https://placekitten.com/220/220" alt="Profile photo of Zamarul Asyraf">
+          <img id="profile-photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect rx='200' ry='200' width='400' height='400' fill='%23ff6b81'/><text x='50%' y='50%' font-size='48' font-family='Baloo,Arial' dominant-baseline='middle' text-anchor='middle' fill='white'>Photo</text></svg>" alt="Profile photo" width="220" height="220">
+          <p class="photo-note">Replace this with your own photo.</p>
         </aside>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="panel">
-      <div class="container two-column">
-        <div>
-          <h3>About Me</h3>
-          <p>I am a dedicated Information Management student with interests in metadata, digital archives, and interactive content creation.</p>
-          <p>I enjoy making projects fun, colorful, and readable for everyone.</p>
+      <div class="container">
+        <h3>About Me</h3>
+        <p>I am a dedicated Information Management student focused on metadata, digital archives, and user-centered interfaces. I enjoy making content easy to find and fun to interact with.</p>
+        <p>I care about clarity, usability, and sustainable design.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="panel">
+      <div class="container">
+        <h3>Skills</h3>
+        <div class="skills-graph">
+          <div class="skill"><span>HTML & CSS</span><div class="bar" data-percent="85"><div></div></div></div>
+          <div class="skill"><span>MySQL</span><div class="bar" data-percent="70"><div></div></div></div>
+          <div class="skill"><span>Metadata & Archival Theory</span><div class="bar" data-percent="75"><div></div></div></div>
+          <div class="skill"><span>Figma</span><div class="bar" data-percent="70"><div></div></div></div>
+          <div class="skill"><span>XAMPP / MySQL Workbench</span><div class="bar" data-percent="65"><div></div></div></div>
         </div>
-        <div>
-          <h4>Timeline</h4>
-          <div class="timeline">
-            <span class="pill">Intern — Library Services (2023)</span>
-            <span class="pill">Diploma — Information Management (UiTM) — 2024–present</span>
-            <span class="pill">Volunteer — Local archive project (2022)</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="panel">
+      <div class="container">
+        <h3>Experience</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Library Services — Intern</h4>
+            <p>2023</p>
+            <p>Assisted with cataloguing, digitization projects, and user support.</p>
+          </div>
+          <div class="card">
+            <h4>Volunteer — Archive Project</h4>
+            <p>2022</p>
+            <p>Supported local community in preserving records and creating basic metadata.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="panel">
+    <!-- EDUCATION -->
+    <section id="education" class="panel">
       <div class="container">
-        <h3>Skills</h3>
-        <canvas id="skillsCanvas" height="200" style="width:100%; border-radius:12px;"></canvas>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="panel">
-      <div class="container">
-        <h3>Experience</h3>
+        <h3>Education</h3>
         <div class="cards">
-          <article class="card">
-            <h4>Library Services — Intern</h4>
-            <p>2023</p>
-            <p>Assisted with cataloguing, digitization projects, and user support.</p>
-          </article>
-          <article class="card">
-            <h4>Volunteer — Archive Project</h4>
-            <p>2022</p>
-            <p>Supported community in preserving records and creating metadata.</p>
-          </article>
+          <div class="card">
+            <h4>Diploma in Information Management — UiTM</h4>
+            <p>2024 — Present</p>
+            <p>Focus on digital records, metadata, and information organization.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="panel">
-      <div class="container">
-        <h3>Education</h3>
-        <article class="card">
-          <h4>Diploma in Information Management — UiTM</h4>
-          <p>2024 — Present</p>
-          <p>Focus on digital records, metadata, and information organization.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Gallery -->
+    <!-- GALLERY -->
     <section id="gallery" class="panel">
       <div class="container">
         <h3>Gallery</h3>
         <div class="gallery-grid">
-          <img src="https://placekitten.com/300/300" alt="Gallery 1">
-          <img src="https://placekitten.com/301/301" alt="Gallery 2">
-          <img src="https://placekitten.com/302/302" alt="Gallery 3">
-          <img src="https://placekitten.com/303/303" alt="Gallery 4">
-          <img src="https://placekitten.com/304/304" alt="Gallery 5">
-          <img src="https://placekitten.com/305/305" alt="Gallery 6">
+          <img src="https://via.placeholder.com/300x300/ff7b7b/fff?text=Gallery+1" alt="Gallery 1">
+          <img src="https://via.placeholder.com/300x300/ffb37b/fff?text=Gallery+2" alt="Gallery 2">
+          <img src="https://via.placeholder.com/300x300/ffd27b/fff?text=Gallery+3" alt="Gallery 3">
         </div>
       </div>
     </section>
 
-    <!-- Notes / Reflection -->
+    <!-- REFLECTION -->
     <section id="notes" class="panel">
-      <div class="container notes-grid">
-        <article class="note">
-          <h4>Design approach</h4>
-          <p>Fun, colorful, interactive, and readable design for users.</p>
-        </article>
-        <article class="note">
-          <h4>Learning</h4>
-          <p>Continuously improving HTML/CSS/JS skills while making things interactive.</p>
-        </article>
-        <article class="note">
-          <h4>Next Goals</h4>
-          <p>Integrate more dynamic content and deploy fully on GitHub Pages.</p>
-        </article>
+      <div class="container">
+        <h3>Reflection</h3>
+        <p>Built responsive layouts with interactive elements. Learned to combine CSS animations and JavaScript for fun effects.</p>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="panel">
-      <div class="container contact-grid">
-        <div>
-          <h3>Contact Me</h3>
-          <ul class="contact-list">
-            <li>Email: <a href="mailto:zamarulasyrafbinzaidi@gmail.com">zamarulasyrafbinzaidi@gmail.com</a></li>
-            <li>Instagram: <a href="https://instagram.com/mdzmaaa" target="_blank">@mdzmaaa</a></li>
-            <li>Supercell: @WonderfulScarceAsy</li>
-          </ul>
-        </div>
+      <div class="container">
+        <h3>Contact</h3>
+        <p>Get in touch — I’m open to collaboration and conversation.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:zamarulasyrafbinzaidi@gmail.com">zamarulasyrafbinzaidi@gmail.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/mdzmaaa" target="_blank">@mdzmaaa</a></li>
+        </ul>
+        <footer class="site-footer">
+          <p>© <span id="year"></span> Zamarul Asyraf Bin Zaidi</p>
+        </footer>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer container">
-    <p>© <span id="currentYear"></span> Zamarul Asyraf — Built with ❤️ and GitHub Pages</p>
-  </footer>
 
   <!-- Gradient background -->
   <div class="bg-anim">
