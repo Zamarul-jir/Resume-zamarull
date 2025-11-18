@@ -1,264 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zamarul Asyraf | Information Management Student</title>
-  <meta name="description" content="Personal resume website of Zamarul Asyraf Bin Zaidi.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyifa Mirza - Fun Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Animated gradient background -->
-  <div class="bg-anim">
-    <div class="grad grad1"></div>
-    <div class="grad grad2"></div>
-    <div class="grad grad3"></div>
-  </div>
-
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="topbar" role="banner">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <h1 class="brand-name">Zamarul Asyraf</h1>
-        <p class="brand-sub">Information Management Student</p>
-      </div>
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#notes">Reflection</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section id="home" class="hero" aria-labelledby="hero-heading">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <h2 id="hero-heading" class="hero-title">
-            Hi. I’m <span class="accent">Zamarul.</span><br>
-            Information Management Student.
-          </h2>
-          <p class="hero-tagline">
-            I’m passionate about crafting meaningful digital experiences that are accessible and user-centered.
-          </p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="assets/resume-placeholder.pdf" download aria-label="Download resume">Download Resume</a>
-            <a class="btn btn-ghost" href="#contact">Contact</a>
-          </div>
-        </div>
-        <aside class="hero-right" aria-hidden="false">
-          <img id="profile-photo"
-               src="data:image/svg+xml;utf8,
-               <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>
-                 <defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2364f2c0'/><stop offset='1' stop-color='%231b7f5a'/></linearGradient></defs>
-                 <rect rx='200' ry='200' width='400' height='400' fill='url(%23g)'/>
-                 <text x='50%' y='50%' font-size='48' font-family='Rubik,Arial' dominant-baseline='middle' text-anchor='middle' fill='white'>Photo</text>
-               </svg>"
-               alt="Profile photo of Zamarul Asyraf"
-               width="220" height="220" loading="lazy">
-          <p class="photo-note">Replace this with your own photo. See README.</p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="panel" aria-labelledby="about-heading">
-      <div class="container two-column">
-        <div>
-          <h3 id="about-heading">About Me</h3>
-          <p>
-            I am a dedicated Information Management student with interests in metadata, digital archives,
-            and user-centered interfaces. I enjoy designing clear, accessible experiences and learning new
-            tools that make content easier to find and manage.
-          </p>
-          <p>
-            I focus on sustainability, usability, and clarity in my work. I appreciate projects that have
-            an educational or social purpose.
-          </p>
-        </div>
-        <div>
-          <h4>Timeline</h4>
-          <div class="timeline">
-            <span class="pill">Intern — Library Services (2023)</span>
-            <span class="pill">Diploma — Information Management (UiTM) — 2024–present</span>
-            <span class="pill">Volunteer — Local archive project (2022)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="panel" aria-labelledby="skills-heading">
-      <div class="container">
-        <h3 id="skills-heading">Skills</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-title">Technical</div>
-            <ul class="skill-list">
-              <li>HTML &amp; CSS <span class="skill-percent">85%</span>
-                <div class="skill-bar"><div style="width:85%"></div></div></li>
-              <li>MySQL <span class="skill-percent">70%</span>
-                <div class="skill-bar"><div style="width:70%"></div></div></li>
-              <li>Metadata & Archival Theory <span class="skill-percent">75%</span>
-                <div class="skill-bar"><div style="width:75%"></div></div></li>
+    <nav>
+        <div class="nav-container">
+            <h1>Asyifa Mirza</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#game">Mini Game</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
-          <div class="skill-card">
-            <div class="skill-title">Tools</div>
-            <ul class="skill-list">
-              <li>Figma <span class="skill-percent">70%</span>
-                <div class="skill-bar"><div style="width:70%"></div></div></li>
-              <li>XAMPP / MySQL Workbench <span class="skill-percent">65%</span>
-                <div class="skill-bar"><div style="width:65%"></div></div></li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <div class="skill-title">Soft Skills</div>
-            <ul class="skill-list">
-              <li>Communication</li>
-              <li>Collaboration</li>
-              <li>Problem Solving</li>
-            </ul>
-          </div>
         </div>
-      </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div class="hero">
+                <img src="profile-placeholder.png" alt="Profile" class="profile-img">
+                <h2>Welcome to My World!</h2>
+                <p>I'm Asyifa, a creative coder and gamer who loves building fun things. Explore below!</p>
+                <div class="floating-emojis">🎉 🚀 💻</div>
+            </div>
+        </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="panel" aria-labelledby="experience-heading">
-      <div class="container">
-        <h3 id="experience-heading">Experience</h3>
-        <div class="cards">
-          <article class="card">
-            <h4>Library Services — Intern</h4>
-            <p class="muted">2023</p>
-            <p>Assisted with cataloguing, digitization projects, and user support.</p>
-          </article>
-          <article class="card">
-            <h4>Volunteer — Archive Project</h4>
-            <p class="muted">2022</p>
-            <p>Supported local community in preserving records and creating basic metadata.</p>
-          </article>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="interactive-shape hexagon" onclick="revealJoke()">
+                <p>I'm a passionate developer and gamer who turns ideas into interactive magic. When not coding, I'm leveling up in games or designing cool stuff. Fun fact: I once built a site that made virtual confetti rain!</p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="panel" aria-labelledby="education-heading">
-      <div class="container">
-        <h3 id="education-heading">Education</h3>
-        <div class="cards">
-          <article class="card">
-            <h4>Diploma in Information Management — UiTM</h4>
-            <p class="muted">2024 — Present</p>
-            <p>Focus on digital records, metadata, and information organization.</p>
-          </article>
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-bar" data-percentage="90">
+                    <div class="skill-label">HTML</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-bar" data-percentage="85">
+                    <div class="skill-label">CSS</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-bar" data-percentage="80">
+                    <div class="skill-label">JavaScript</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-bar" data-percentage="75">
+                    <div class="skill-label">React</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-bar" data-percentage="95">
+                    <div class="skill-label">Gaming</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-bar" data-percentage="70">
+                    <div class="skill-label">Photoshop</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="panel" aria-labelledby="gallery-heading">
-      <div class="container">
-        <h3 id="gallery-heading">Gallery.</h3>
-        <p class="muted">A glimpse into my moments, memories, and creations.</p>
-
-        <div class="gallery-grid">
-          <a class="gallery-item" href="#g1"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2376cbb8'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 1</text></svg>" alt="Gallery image 1"></a>
-          <a class="gallery-item" href="#g2"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2381d6c2'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 2</text></svg>" alt="Gallery image 2"></a>
-          <a class="gallery-item" href="#g3"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2364f2c0'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 3</text></svg>" alt="Gallery image 3"></a>
-          <a class="gallery-item" href="#g4"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2356e4b0'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 4</text></svg>" alt="Gallery image 4"></a>
-          <a class="gallery-item" href="#g5"><img src="data:image-svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2369d9b6'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 5</text></svg>" alt="Gallery image 5"></a>
-          <a class="gallery-item" href="#g6"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><rect width='100%25' height='100%25' rx='18' fill='%2388eacb'/><text x='50%25' y='50%25' font-size='36' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 6</text></svg>" alt="Gallery image 6"></a>
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="interactive-shape circle">
+                <h3>Frontend Developer</h3>
+                <p>Built interactive websites with animations that wow users. Debugged while gaming for extra fun!</p>
+            </div>
+            <div class="interactive-shape triangle">
+                <h3>Gamer Extraordinaire</h3>
+                <p>Led teams to victory in online games, strategizing like a pro. High scores are my jam!</p>
+            </div>
+            <div class="interactive-shape hexagon">
+                <h3>Graphic Designer</h3>
+                <p>Created stunning visuals in Photoshop. Turned simple ideas into epic art.</p>
+            </div>
         </div>
-
-        <div class="lightboxes">
-          <div id="g1" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2376cbb8'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 1 — Full</text></svg>" alt="Gallery 1 full"></div>
-          <div id="g2" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2381d6c2'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 2 — Full</text></svg>" alt="Gallery 2 full"></div>
-          <div id="g3" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image-svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2364f2c0'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 3 — Full</text></svg>" alt="Gallery 3 full"></div>
-          <div id="g4" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image-svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2356e4b0'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 4 — Full</text></svg>" alt="Gallery 4 full"></div>
-          <div id="g5" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image-svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2369d9b6'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 5 — Full</text></svg>" alt="Gallery 5 full"></div>
-          <div id="g6" class="lightbox"><a class="close" href="#gallery" aria-label="Close">×</a><img src="data:image-svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><rect width='100%25' height='100%25' fill='%2388eacb'/><text x='50%25' y='50%25' font-size='64' text-anchor='middle' dominant-baseline='middle' fill='white'>Gallery 6 — Full</text></svg>" alt="Gallery 6 full"></div>
-        </div>
-      </div>
     </section>
 
-    <!-- NOTES / REFLECTION -->
-    <section id="notes" class="panel" aria-labelledby="notes-heading">
-      <div class="container">
-        <h3 id="notes-heading">Reflection</h3>
-        <div class="notes-grid">
-          <article class="note"><h4>Design approach</h4><p class="muted">Clean layout, subtle animation, accessibility-first decisions.</p></article>
-          <article class="note"><h4>Performance</h4><p class="muted">SVGs and CSS reduce size and keep site fast.</p></article>
-          <article class="note"><h4>Learning</h4><p class="muted">Built responsive grid and CSS-only lightbox.</p></article>
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="interactive-shape square">
+                <h3>Bachelor's in Computer Science</h3>
+                <p>University of Fun Coding, 2020-2024. Learned coding while playing games—best combo ever!</p>
+            </div>
+            <div class="interactive-shape circle">
+                <h3>High School Diploma</h3>
+                <p>School of Creativity, 2016-2020. Discovered design and my love for gaming.</p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="panel" aria-labelledby="contact-heading">
-      <div class="container contact-grid">
-        <div>
-          <h3 id="contact-heading">Contact</h3>
-          <p>Get in touch — I’m open to collaboration and conversation.</p>
-          <ul class="contact-list">
-            <li>
-              <svg class="icon icon-bounce" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
-                  focusable="false">
-                <path fill="currentColor"
-                  d="M2 6.5A2.5 2.5 0 014.5 4h15A2.5 2.5 0 0122 6.5v11A2.5 2.5 0 0119.5 20h-15A2.5 2.5 0 012 17.5v-11zM4.5 6 12 11l7.5-5H4.5z">
-                </path>
-              </svg>
-              <a href="mailto:zamarulasyrafbinzaidi@gmail.com">zamarulasyrafbinzaidi@gmail.com</a>
-            </li>
-            <li>
-              <svg class="icon icon-bounce" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
-                  focusable="false">
-                <path fill="currentColor"
-                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2.1.4 2.6.8.6.5 1 1.2 1.2 2 .3 1.3.5 1.7.6 4.9s0 3.6-.1 4.9c-.1 1.2-.4 2.1-.8 2.6-.5.6-1.2 1-2 .1-1.3.3-1.7.5-4.9.6s-3.6 0-4.9-.1c-1.2-.1-2.1-.4-2.6-.8-.6-.5-1-1.2-1.2-2-.3-1.3-.5-1.7-.6-4.9S2.2 12 2.3 10.7c.1-1.2.4-2.1.8-2.6C4 7.6 4.7 7.2 5.5 7c1.3-.3 1.7-.5 4.9-.6S8.9 2.2 12 2.2z">
-                </path>
-              </svg>
-              <a href="https://instagram.com/mdzmaaa" target="_blank" rel="noopener noreferrer">@mdzmaaa</a>
-            </li>
-            <li>
-              <svg class="icon icon-bounce" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
-                  focusable="false">
-                <circle cx="12" cy="12" r="10"></circle>
-              </svg>
-              <span>@WonderfulScarceAsy (Supercell)</span>
-            </li>
-          </ul>
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="placeholder.png" alt="Image 1" class="gallery-img">
+                <img src="placeholder.png" alt="Image 2" class="gallery-img">
+                <img src="placeholder.png" alt="Image 3" class="gallery-img">
+                <img src="placeholder.png" alt="Image 4" class="gallery-img">
+                <img src="placeholder.png" alt="Image 5" class="gallery-img">
+                <img src="placeholder.png" alt="Image 6" class="gallery-img">
+                <img src="placeholder.png" alt="Image 7" class="gallery-img">
+                <img src="placeholder.png" alt="Image 8" class="gallery-img">
+                <img src="placeholder.png" alt="Image 9" class="gallery-img">
+            </div>
         </div>
-
-        <footer class="site-footer" role="contentinfo">
-          <p>© <span id="year"></span> Zamarul Asyraf Bin Zaidi • Built with HTML &amp; CSS • <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
-        </footer>
-      </div>
     </section>
 
-  </main>
+    <section id="game">
+        <div class="container">
+            <h2>Mini Game: Color Burst</h2>
+            <p>Click the bursting orbs to score! Game lasts 20 seconds.</p>
+            <div id="game-area">
+                <div id="score">Score: 0</div>
+                <button id="start-game">Start Game</button>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const y = new Date().getFullYear();
-      const el = document.getElementById('year');
-      if(el) el.textContent = y;
-      document.addEventListener('keydown', (e) => {
-        if(e.key === 'Escape' && window.location.hash.startsWith('#g')) {
-          history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
-      });
-    });
-  </script>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="mailto:zamarulasyrafbinzaidi@gmail.com" class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://instagram.com/mdzmaa" target="_blank" class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                    <span>@mdzmaaa</span>
+                </a>
+                <a href="https://supercell.com" target="_blank" class="contact-icon">
+                    <i class="fas fa-gamepad"></i>
+                    <span>@WonderfulScarceAsy</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with ❤️ by Asyifa Mirza</p>
+    </footer>
 </body>
 </html>
